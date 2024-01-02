@@ -1,7 +1,7 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: foo-app
+  name: foo-new-app
   labels:
     app: foo
 spec:
