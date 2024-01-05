@@ -12,7 +12,7 @@ spec:
           - git:
               repoURL: 'https://github.com/gyach/mt-kustomize.git'
               revision: HEAD
-              files:
+              directories:
                 - path: apps/*
           # Соеднияем файлы конфигурации и список приложений
           - matrix:
@@ -28,7 +28,7 @@ spec:
                     repoURL: 'https://github.com/gyach/mt-kustomize.git'
                     revision: HEAD
                     files:
-                      - path: 'apps/*.json'
+                      - path: 'apps/{{.path.basename}}/*.json'
 
   template:
     metadata:
