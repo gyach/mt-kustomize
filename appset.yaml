@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet # Наш ApplicationSet описывает все модули
 metadata:
-  name: modules-appset
+  name: mt-appset
   namespace: argocd
 spec:
   goTemplate: true
@@ -12,7 +12,7 @@ spec:
           - git:
               repoURL: 'https://github.com/gyach/mt-kustomize.git'
               revision: HEAD
-              directories:
+              files:
                 - path: apps/*
           # Соеднияем файлы конфигурации и список приложений
           - matrix:

@@ -1,6 +1,6 @@
 {
   "destination": {
     "server": "https://kubernetes.default.svc",
-    "namespace": "test1"
+    "namespace": "test2"
   }
 }
